@@ -41,28 +41,36 @@ const Page: PageEl = (props, state, refresh, getProps) => {
 
       <Window title='سبد خرید' style={{ height: 120, margin: 10, width: "calc(100% - 20px)", backgroundColor: "gainsboro" }}>
 
-        <f-x>
-          <f-cc style={{ margin: 10, paddingRight:10 }}>
-            <f-12><img src='https://irmapserver.ir/research/12/shopping-cart%20%28m%29.png' style={{ width: 30, height: 30 }} /></f-12>
-            <sp-2 />
-            <f-12 style={{ fontSize: 20 }}>تعداد کتاب : </f-12>
-            <f-12 style={{ fontSize: 20 }}>{(count as number).toLocaleString("fa-IR")}</f-12>
-          </f-cc>
-        </f-x>
+        <c-x style={{ position: "relative" }}>
+          <f-x>
+            <f-cc style={{ margin: 10, paddingRight: 10 }}>
+              <f-12><img src='https://irmapserver.ir/research/12/shopping-cart%20%28m%29.png' style={{ width: 30, height: 30 }} /></f-12>
+              <sp-2 />
+              <f-12 style={{ fontSize: 20 }}>تعداد کتاب : </f-12>
+              <f-12 style={{ fontSize: 20 }}>{(count as number).toLocaleString("fa-IR")}</f-12>
+            </f-cc>
 
-        <f-x>
-          <f-cc style={{ fontSize: 20 ,paddingRight:10}}>
-            <f-12><img src='https://irmapserver.ir/research/12/dollars.png' style={{ width: 30, height: 30 }} /></f-12>
-            <sp-2 />
-            <f-12 style={{ fontSize: 20 }}>مجموع قابل پرداخت:  </f-12>
-            <sp-2 />
+          </f-x>
 
-            <f-12 style={{ fontSize: 20 }}>{(totalprice as number).toLocaleString("fa-IR")}</f-12>
-            <sp-2 />
-            <f-12 style={{ fontSize: 20 }}>تومان</f-12>
-          </f-cc>
+          <f-x>
+            <f-cc style={{ fontSize: 20, paddingRight: 10 }}>
+              <f-12><img src='https://irmapserver.ir/research/12/dollars.png' style={{ width: 30, height: 30 }} /></f-12>
+              <sp-2 />
+              <f-12 style={{ fontSize: 20 }}>مجموع قابل پرداخت:<b></b>  </f-12>
+              <sp-2 />
 
-        </f-x>
+              <f-12 style={{ fontSize: 20 }}>{(totalprice as number).toLocaleString("fa-IR")}</f-12>
+              <sp-2 />
+              <f-12 style={{ fontSize: 20 }}>تومان</f-12>
+            </f-cc>
+
+          </f-x>
+          <img src='https://irmapserver.ir/research/12/stack-of-books.png' style={{ width: 80, height: 80, position: "absolute", right: 800, top: 7 }} />
+
+        </c-x>
+
+
+
 
 
       </Window>
@@ -71,36 +79,51 @@ const Page: PageEl = (props, state, refresh, getProps) => {
         delete state.form
         refresh()
       }}>
+        <c-x style={{position:"relative"}}>
+          <f-c>
+            <f-15>نام کتاب:</f-15>
+            <sp-2 />
+            <f-15>{state.book.title}</f-15>
+          </f-c>
 
-        <f-c>
-          <f-15>نام کتاب:</f-15>
-          <sp-2 />
-          <f-15>{state.book.title}</f-15>
-        </f-c>
+          <br-xx/>
 
-        <f-c>
-          <f-15>کشور:</f-15>
-          <sp-2 />
-          <f-15>{state.book.country}</f-15>
-        </f-c>
+          <f-c>
+            <f-15>کشور:</f-15>
+            <sp-2 />
+            <f-15>{state.book.country}</f-15>
+          </f-c>
+          
+          <br-xx/>
 
-        <f-c>
-          <f-15>زبان:</f-15>
-          <sp-2 />
-          <f-15>{state.book.language}</f-15>
-        </f-c>
+          <f-c>
+            <f-15>زبان:</f-15>
+            <sp-2 />
+            <f-15>{state.book.language}</f-15>
+          </f-c>
 
-        <f-c>
-          <f-15>صفحه:</f-15>
-          <sp-2 />
-          <f-15>{state.book.pages}</f-15>
-        </f-c>
+          <br-xx/>
 
-        <f-c>
-          <f-15>قیمت:</f-15>
-          <sp-2 />
-          <f-15>{state.book.price}</f-15>
-        </f-c>
+          <f-c>
+            <f-15>صفحه:</f-15>
+            <sp-2 />
+            <f-15>{(state.book.pages as number).toLocaleString("fa-IR")}</f-15>
+          </f-c>
+
+          <br-xx/>
+
+          <f-c>
+            <f-15>قیمت:</f-15>
+            <sp-2 />
+            <f-15>{(state.book.price as number).toLocaleString("fa-IR")}</f-15>
+            <sp-3 />
+            <f-15 style={{ fontSize: 15 }}>تومان</f-15>
+          </f-c>
+        </c-x>
+
+
+
+        <img src='https://irmapserver.ir/research/12/book.png' style={{ width: 80, height: 80, position:"absolute", right:325 , bottom:70}} />
 
         <br-x />
         <br-x />
