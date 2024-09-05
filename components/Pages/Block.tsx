@@ -61,12 +61,12 @@ export const Block = props => {
         <br-x />
         <br-x />
 
-        {props.state.fav.includes(props.book.title) ? <img src="https://cdn.turing.team/research/12/heart%20main.png"
+        {props.state.fav.includes(props.book.title) ? <img src="https://cdn.ituring.ir/research/12/heart%20main.png"
             style={{ width: 28, height: 28, position: "absolute", top: 230, right: 8 }} /> : null}
 
-        {props.state.cart.includes(props.book.title) ? <img src="https://cdn.turing.team/research/12/check%20%282%29.png"
+        {props.state.cart.includes(props.book.title) ? <img src="https://cdn.ituring.ir/research/12/check%20%282%29.png"
             style={{ height: 30, width: 30, position: "absolute", top: 230, right: 120 }} /> :
-            <img src='https://cdn.turing.team/research/12/add-to-cart.png' style={{ height: 30, width: 30, position: "absolute", top: 230, right: 120 }} />
+            <img src='https://cdn.ituring.ir/research/12/add-to-cart.png' style={{ height: 30, width: 30, position: "absolute", top: 230, right: 120 }} />
 
         }
 

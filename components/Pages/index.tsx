@@ -68,7 +68,7 @@ const Page: PageEl = (props, state, refresh, getProps) => {
 
           <f-x>
             <f-cc style={{ margin: 10, paddingRight: 10 }}>
-              <f-12><img src='https://cdn.turing.team/research/12/shopping-cart%20%28m%29.png' style={{ width: 30, height: 30 }} /></f-12>
+              <f-12><img src='https://cdn.ituring.ir/research/12/shopping-cart%20%28m%29.png' style={{ width: 30, height: 30 }} /></f-12>
               <sp-2 />
               <f-12 style={{ fontSize: 20 }}>تعداد کتاب : </f-12>
               <f-12 style={{ fontSize: 20 }}>{(count as number).toLocaleString("fa-IR")}</f-12>
@@ -78,7 +78,7 @@ const Page: PageEl = (props, state, refresh, getProps) => {
 
           <f-x>
             <f-cc style={{ fontSize: 20, paddingRight: 10 }}>
-              <f-12><img src='https://cdn.turing.team/research/12/dollars.png' style={{ width: 30, height: 30 }} /></f-12>
+              <f-12><img src='https://cdn.ituring.ir/research/12/dollars.png' style={{ width: 30, height: 30 }} /></f-12>
               <sp-2 />
               <f-12 style={{ fontSize: 20 }}>مجموع قابل پرداخت:<b></b>  </f-12>
               <sp-2 />
@@ -89,7 +89,7 @@ const Page: PageEl = (props, state, refresh, getProps) => {
             </f-cc>
 
           </f-x>
-          <img src='https://cdn.turing.team/research/12/stack-of-books.png' style={{ width: 80, height: 80, position: "absolute", right: 800, top: 7 }} />
+          <img src='https://cdn.ituring.ir/research/12/stack-of-books.png' style={{ width: 80, height: 80, position: "absolute", right: 800, top: 7 }} />
 
         </c-x>
 
@@ -147,7 +147,7 @@ const Page: PageEl = (props, state, refresh, getProps) => {
 
 
 
-        <img src='https://cdn.turing.team/research/12/book.png' style={{ width: 80, height: 80, position: "absolute", right: 325, bottom: 70 }} />
+        <img src='https://cdn.ituring.ir/research/12/book.png' style={{ width: 80, height: 80, position: "absolute", right: 325, bottom: 70 }} />
 
         <br-x />
         <br-x />
@@ -178,7 +178,7 @@ const Page: PageEl = (props, state, refresh, getProps) => {
             }}>
 
             {state.fav.includes(state.book.title) ?
-              <f-cc><img src='https://cdn.turing.team/research/12/delete-heart.png' style={{ width: 30, height: 30 }} /></f-cc> : <f-cc><img src='https://cdn.turing.team/research/12/heart.png' style={{ width: 30, height: 30 }} /></f-cc>}
+              <f-cc><img src='https://cdn.ituring.ir/research/12/delete-heart.png' style={{ width: 30, height: 30 }} /></f-cc> : <f-cc><img src='https://cdn.ituring.ir/research/12/heart.png' style={{ width: 30, height: 30 }} /></f-cc>}
             <sp-3 />
             {state.fav.includes(state.book.title) ?
               <f-12>حذف از علاقه مندی ها</f-12> : <f-12>افزودن به علاقه مندی ها</f-12>}
@@ -214,7 +214,7 @@ const Page: PageEl = (props, state, refresh, getProps) => {
             }}>
 
             {state.cart.includes(state.book.title) ?
-              <f-cc><img src='https://cdn.turing.team/research/12/delete-product.png' style={{ width: 30, height: 30 }} /></f-cc> : <f-cc><img src='https://cdn.turing.team/research/12/cart.png' style={{ width: 30, height: 30 }} /></f-cc>}
+              <f-cc><img src='https://cdn.ituring.ir/research/12/delete-product.png' style={{ width: 30, height: 30 }} /></f-cc> : <f-cc><img src='https://cdn.ituring.ir/research/12/cart.png' style={{ width: 30, height: 30 }} /></f-cc>}
             <sp-2 />
             {state.cart.includes(state.book.title) ?
               <f-13>حذف از سبد خرید</f-13> : <f-13>افزودن به سبد خرید</f-13>}
@@ -254,7 +254,7 @@ export async function getServerSideProps(context) {
   let books = await global.db.collection("Books").find({}).toArray()
 
   for (let book of books) {
-    book.imageLink = "https://cdn.turing.team/research/ex/books/" + book.imageLink
+    book.imageLink = "https://cdn.ituring.ir/research/ex/books/" + book.imageLink
   }
   console.log(books)
 
