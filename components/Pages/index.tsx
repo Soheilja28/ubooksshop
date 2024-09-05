@@ -89,7 +89,12 @@ const Page: PageEl = (props, state, refresh, getProps) => {
             </f-cc>
 
           </f-x>
-          <img src='https://cdn.ituring.ir/research/12/stack-of-books.png' style={{ width: 80, height: 80, position: "absolute", right: 800, top: 7 }} />
+          <img src='https://cdn.ituring.ir/research/12/stack-of-books.png' style={{
+            width: 80,
+            height: 80,
+            position: "absolute",
+            right: 800, top: 7
+          }} />
 
         </c-x>
 
@@ -147,7 +152,12 @@ const Page: PageEl = (props, state, refresh, getProps) => {
 
 
 
-        <img src='https://cdn.ituring.ir/research/12/book.png' style={{ width: 80, height: 80, position: "absolute", right: 325, bottom: 70 }} />
+        <img src='https://cdn.ituring.ir/research/12/book.png' style={{
+          width: 80,
+          height: 80,
+          position: "absolute",
+          right: 325, bottom: 70
+        }} />
 
         <br-x />
         <br-x />
